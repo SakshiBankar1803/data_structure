@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+  int i,n,a[50],n1,f=0,top,mid,bottom;
+  printf("enter limit::");
+  scanf("%d",&n);
+  printf("enter n nos::");
+  for(i=0;i<n;i++)
+  scanf("%d",&a[i]);
+  printf("enter number to search::");
+  scanf("%d",&n1);
+  
+  top=0;
+  bottom=n-1;
+  while(top<=bottom)
+  { 
+    mid=(top+bottom)/2;
+    if(a[mid]==n1)
+    { 
+      f=1;break;
+    }
+    if(n1>a[mid])
+    top=mid+1;
+    else
+    bottom=mid-1;
+  }
+  if(f==1)
+  printf("number is found...");
+  else
+  printf("number is not found...");
+  
+}

@@ -1,0 +1,34 @@
+#include<stdio.h>
+ struct emp
+ { int eno;
+   char ename [20];
+   float sal;
+ }e1[50];
+ int main()
+ {
+   int i,n,no,f=0,top,mid,bottom;
+   printf("enter limit::");
+   scanf("%d",&n);
+   for(i=0;i<n;i++)
+   { printf("enter emp no name and sal::");
+     scanf("%d%s%f",&e1[i].eno,&e1[i].ename,&e1[i].sal);
+   }
+   printf("enter emp number to search::");
+   scanf("%d",&no);
+   
+   top=0;bottom=n-1;
+   while(top<=bottom)
+   { mid=(top+bottom)/2;
+     if(e1[mid].eno==no)
+     { f=1;break;
+     }
+     if(no>e1[mid].eno)
+     top=mid+1;
+     else
+     bottom=mid-1;
+   }
+   if(f==1)
+   printf("emp number is found...");
+   else
+   printf("emp number is not found....");
+ }
