@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<string.h>
-# define MAX 4
+# define MAX 20
 struct stack
 {
-  char a[MAX];
+  char a[20][20];
   int top;
 }s1;
 
@@ -14,7 +14,7 @@ void initial()
 
 char isempty()
 {
-  if(strcmp(s1.top,-1)==0)
+  if(s1.top==-1)
   return 1;
   else
   return 0;
@@ -22,13 +22,13 @@ char isempty()
 
 char isfull()
 {
-  if(strcmp(s1.top,MAX-1)==0)
+  if(s1.top==MAX-1)
   return 1;
   else
   return 0;
 }
 
-void push(char nm)
+void push(char nm[20])
 {
   if(isfull())
   printf("stack is full dont push");
@@ -84,7 +84,6 @@ int main()
     }
   }while(ch<4);
 }
-
 
 
 
