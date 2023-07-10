@@ -1,3 +1,5 @@
+// convert infix expression to postfix using while loop
+
 #include<stdio.h>
 
 #include<string.h>
