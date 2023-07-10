@@ -1,3 +1,5 @@
+//convert infix to postfix expression 
+
 #include<string.h>
 #include<ctype.h>
 #include<stdio.h>
