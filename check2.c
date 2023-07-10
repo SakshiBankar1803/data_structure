@@ -1,0 +1,133 @@
+#include<stdio.h>
+
+#include<string.h>
+#define MAX 100
+ struct stack
+ {
+   char a[MAX];
+   int top;
+ }s;
+ 
+ void initial()
+ {
+   s.top=-1;
+ }
+ 
+ int isempty()
+ {
+    if(s.top==-1)
+    return 1;
+    else
+    return 0;
+ }
+ 
+ int isfull()
+ {
+   if(s.top==MAX-1)
+   return 1;
+   else
+   return 0;
+ }
+ 
+ void push(char ch)
+ {
+   if(isfull())
+   printf("stack is full dont push....");
+   else
+   {
+      s.top++;
+      s.a[s.top]=ch;
+   }
+ }
+ 
+ int pop()
+ {
+   char ch;
+   if(isempty())
+    return -1;
+   else
+   {
+     ch=s.a[s.top];
+     s.top--;
+     return ch;
+   }
+ }
+ 
+ 
+ int precedence(char n)
+ {
+    if(n=='(')
+    return 0;
+    if(n=='+' || n=='-')
+    return 1;
+    if(n=='*' || n=='/')
+    return 2;
+    return 0;
+ 
+ }
+ 
+ int main()
+ {
+    char string[100],ch;
+     int i;
+    printf("enter string::");
+    scanf("%s",string);
+    
+    initial();
+    for(i=0;string[i]!='\0';i++)
+    {
+      if(isalpha(string[i]))
+      printf("%c",string[i]);
+      else if(string[i]=='(')
+      push(string[i]);
+      else if(string[i]==')')
+      {
+         while((ch=pop())!='(')
+         printf("%c",ch);
+      }
+     else
+     
+     {
+       while(precedence(s.a[s.top])>=precedence(string[i]))
+      printf("%c",pop());
+      push(string[i]);
+     }
+     string[i]++;
+    }
+    while(!isempty())
+    printf("%c",pop());
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
