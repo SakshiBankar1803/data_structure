@@ -1,3 +1,10 @@
+//linked list menu driven
+//1-create 2-display 
+//3-if position =1 then insert at beginning otherwise insert middle
+//4 delete n perticular code
+//5-search a given numbrer in linkedlist and return node if found else return NULL.
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<malloc.h>
