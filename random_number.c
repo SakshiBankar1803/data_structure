@@ -1,3 +1,5 @@
+//accept n number randomly and return its position if number is found using function(used rand() function)...
+
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>
