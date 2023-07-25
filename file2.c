@@ -1,3 +1,5 @@
+//display all cities name from "cityy.txt" file....
+
 #include<stdio.h>
 #include<stdlib.h>
 int main()
