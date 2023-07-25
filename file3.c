@@ -1,3 +1,5 @@
+//search a given number in file "number.txt" using linear search....
+
 #include<stdio.h>
 #include<stdlib.h>
 int main()
