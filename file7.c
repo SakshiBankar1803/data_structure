@@ -1,3 +1,5 @@
+//accept n number from file "num.txt" and check number is found or not using binary search....
+
 #include<stdio.h>
 #include<stdlib.h>
 int main()
