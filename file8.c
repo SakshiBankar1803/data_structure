@@ -1,3 +1,5 @@
+//accept city name and std code and accept city for search if city found print their std code using binary search....
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
