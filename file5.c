@@ -1,3 +1,5 @@
+//accept n numbers from file "num.txt" and cheach number found or not using function...
+
 #include<stdio.h>
 #include<stdlib.h>
 int main()
