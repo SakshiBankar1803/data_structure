@@ -1,3 +1,5 @@
+//accept n number and print ascending order using selection sort using function....
+
 #include<stdio.h>
 
 int selection(int a[100],int n)
