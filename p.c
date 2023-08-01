@@ -1,3 +1,5 @@
+//accept n nos using sentinal search using function....
+
 #include<stdio.h>
 
 
