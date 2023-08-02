@@ -1,3 +1,5 @@
+//accept n numbers using probability search using function....
+
 #include<stdio.h>
  
   void accept(int n)
