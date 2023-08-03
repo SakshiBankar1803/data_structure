@@ -1,5 +1,8 @@
+//accept n nos randomly and printf them also check number is present n that random array or not....
+
 #include<stdio.h>
 #include<math.h>
+#include<time.h>
 void main()
 {
   int n,i,num,a[200];
