@@ -1,3 +1,5 @@
+//accept n numbers in array and sort them using quick sort recursively....
+
 #include<stdio.h>
 
 int partition(int a[],int lb,int ub)
