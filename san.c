@@ -1,3 +1,5 @@
+//read file number.txt and check number is found in that file or not....
+
 #include<stdio.h>
 #include<stdlib.h>
 int main()
