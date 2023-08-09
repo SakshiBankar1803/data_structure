@@ -1,3 +1,5 @@
+//accept n random number and check number found or not using function....
+
 #include<stdio.h>
 #include<time.h>
 #include<math.h>
