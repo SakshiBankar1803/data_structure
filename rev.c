@@ -1,3 +1,5 @@
+Que:reverse stack string.
+
 #include<stdio.h>
 #include<string.h>
 #define MAC 50
