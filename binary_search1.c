@@ -1,4 +1,4 @@
-// accept n numbers and accept number tosearch using binary search using function:::
+// accept n numbers and accept number tosearch using binary search using function.
 
 #include<stdio.h>
 int main()
