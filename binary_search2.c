@@ -1,4 +1,5 @@
-//accept n cities name and search city by binary search using fuction...
+//QUE:
+//accept n cities name and search city by binary search using fuction.
 #include<string.h>
 #include<stdio.h>
 int main()
