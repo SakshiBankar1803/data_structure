@@ -1,0 +1,86 @@
+//slip 2,8,17_que2
+#include<stdio.h>
+#define MAX 20
+char data[MAX];
+int top;
+void init()
+{
+	top=-1;
+}
+int isempty()
+{
+	if(top==-1)
+		return 1;
+	else
+		return 0;
+}
+int isfull()
+{
+	if(top==MAX-1)
+		return 1;
+	else
+		return 0;
+}
+void push(char c)
+{
+	if(isfull())
+	{
+		printf("\nStack is full dont push..");
+	}
+	else
+	{
+		top++;
+		data[top]=c;
+	}
+}
+char pop()
+{
+	char c;
+	if(isempty())
+	{
+		printf("\nStack is full dont push..");
+	}
+	else
+	{
+		c=data[top];
+		top--;
+		return c;
+	}
+}
+int main()
+{
+	char s1[20],s2[20],temp[20];
+	int i,k=0;
+	printf("Enter string:");
+	gets(s1);
+	init();
+	for(i=0;s1[i]!='\0';i++)
+	{
+		push(s1[i]);
+	}
+	printf("\norginal stack:");
+	for(i=0;s1[i]!='\0';i++)
+	{
+		printf("%c",s1[i]);
+	}
+	while(!isempty())
+	{
+		temp[k]=pop();
+		k++;
+	}
+	temp[k]='\0';
+	for(k=0;temp[k]!='\0';k++)
+	{
+		push(temp[k]);
+	}
+	while(!isempty())
+	{
+		s2[k]=pop();
+		k++;
+	}
+	printf("\ncopied stack=");
+	for(k=0;s2[k]!='\0';k++)
+	{
+		printf("%c",s2[k]);
+	}
+}
