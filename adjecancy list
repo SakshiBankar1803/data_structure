@@ -1,0 +1,77 @@
+// Write a C program that accepts the vertices and edges of a graph. Create adjacency list.
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<malloc.h>
+#define memory (struct node *)malloc(sizeof(struct node))
+typedef struct node
+{
+    int data;
+    struct node *next;
+}node;
+
+node *head[10];
+node *create(int a[10][10],int n)
+{
+    node *newnode,*temp;
+    int i,j;
+    for(i=1;i<=n;i++)
+    {
+        head[i]=NULL;
+        for(j=1;j<=n;j++)
+        {
+            if(a[i][j]==1)
+            {
+                newnode=memory;
+                newnode->data=j;
+                newnode->next=NULL;
+                if(head[i]==NULL)
+                {
+                    head[i]=temp=newnode;
+                }
+                else
+                {
+                    temp->next=newnode;
+                    temp=newnode;
+                }
+            }
+        }
+    }
+}
+
+void disp(int n)
+{
+    node *temp;
+    int i;
+  for(i=1;i<=n;i++)
+  {
+    printf("\nhead%d=>",i);
+    for(temp=head[i];temp!=NULL;temp=temp->next)
+    {
+        printf("%d->",temp->data);
+    }
+    printf("NULL...");
+  }
+}
+
+int main()
+{
+    int n,i,j,a[10][10];
+    printf("enter limit::");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=n;j++)
+        {
+            a[i][j]=0;
+            if(i!=j)
+            {
+                printf("enter edge between %d and %d",i,j);
+                scanf("%d",&a[i][j]);
+            }
+        }
+    }
+
+    create(a,n);
+    disp(n);
+}
